@@ -1,6 +1,3 @@
-# DFIR_mcs4645_CSEC475
-Windows Forensics class repository
-Michael Swidrak 
 function Get_Time{}
 
 Get-Date
@@ -87,4 +84,13 @@ foreach ( $Computer in $arrComputer ) {
 
 function Get_Driver_List{
 Get-WindowsDriver -Online -All
+}
+
+function Listening_Ports{
+Get-NetTCPConnection
+}
+
+
+function Established_Connections{
+Get-NetTCPConnection -State Established
 }
